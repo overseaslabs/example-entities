@@ -26,7 +26,7 @@ public class Email {
     private String email;
 
     @NotBlank
-    private String contentHash;
+    private String content;
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
@@ -64,12 +64,12 @@ public class Email {
         return this;
     }
 
-    public String getContentHash() {
-        return contentHash;
+    public String getContent() {
+        return content;
     }
 
-    public Email setContentHash(String contentHash) {
-        this.contentHash = contentHash;
+    public Email setContent(String content) {
+        this.content = content;
         return this;
     }
 }
