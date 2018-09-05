@@ -57,7 +57,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId 'com.overseaslabs.example'
-            version '1.0'
+            version '0.1.0'
             artifactId = 'entities'
             from components.java
             artifact sourcesJar
