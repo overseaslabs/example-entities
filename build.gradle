@@ -14,8 +14,10 @@ plugins {
 
 dependencies {
     compile(
-            [group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.4.RELEASE'],
-            [group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final']
+            [group: 'org.hibernate', name: 'hibernate-core', version: '5.3.5.Final'],
+            [group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'],
+            [group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.0.9.RELEASE'],
+            [group: 'org.springframework', name: 'spring-aspects', version: '5.0.8.RELEASE']
     )
 }
 

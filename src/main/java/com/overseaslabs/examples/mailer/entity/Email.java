@@ -41,11 +41,6 @@ public class Email {
         return id;
     }
 
-    public Email setId(Integer id) {
-        this.id = id;
-        return this;
-    }
-
     public String getRecipient() {
         return recipient;
     }
