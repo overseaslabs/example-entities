@@ -1,5 +1,7 @@
 package com.overseaslabs.examples.mailer.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.ZonedDateTimeSerializer;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -30,10 +32,12 @@ public class Email {
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
+    @JsonSerialize(using = ZonedDateTimeSerializer.class)
     private ZonedDateTime created;
 
     @UpdateTimestamp
     @Column(nullable = false, updatable = false)
+    @JsonSerialize(using = ZonedDateTimeSerializer.class)
     private ZonedDateTime updated;
 
 
@@ -65,6 +69,16 @@ public class Email {
 
     public Email setContent(String content) {
         this.content = content;
+        return this;
+    }
+
+    public Email setCreated(ZonedDateTime created) {
+        this.created = created;
+        return this;
+    }
+
+    public Email setUpdated(ZonedDateTime updated) {
+        this.updated = updated;
         return this;
     }
 }
