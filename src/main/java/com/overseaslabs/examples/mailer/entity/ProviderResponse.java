@@ -8,12 +8,12 @@ public class ProviderResponse {
     private Boolean success;
     private String message;
 
-    ProviderResponse(Boolean success, String message) {
+    public ProviderResponse(Boolean success, String message) {
         this.success = success;
         this.message = message;
     }
 
-    ProviderResponse(Boolean success, String message, Email email) {
+    public ProviderResponse(Boolean success, String message, Email email) {
         this(success, message);
         this.email = email;
     }
