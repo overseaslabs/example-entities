@@ -8,6 +8,9 @@ public class ProviderResponse {
     private Boolean success;
     private String message;
 
+    public ProviderResponse() {
+    }
+
     public ProviderResponse(Boolean success, String message) {
         this.success = success;
         this.message = message;

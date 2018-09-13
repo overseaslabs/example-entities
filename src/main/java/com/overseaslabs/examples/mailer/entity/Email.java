@@ -40,6 +40,8 @@ public class Email {
     @JsonSerialize(using = ZonedDateTimeSerializer.class)
     private ZonedDateTime updated;
 
+    public Email() {
+    }
 
     public Integer getId() {
         return id;
